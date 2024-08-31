@@ -23,10 +23,23 @@
 	padding: 50px 31px;
 	background-color: #ffffff;
 	border-right: 1px solid #000000;
+	gap: 50px;
+}
+
+
+.title {
+	font-family: Open Sans;
+	font-size: 31px;
+	font-weight: 800;
+	line-height: 42.22px;
 }
 
 .bottomContainer {
 	display: flex;
 	justify-content: space-between;
 	margin-top: auto;
+}
+
+.select:hover {
+	border-color: #FFC802;
 }

@@ -8,6 +8,7 @@
 	row-gap: 4px;
 }
 
+
 .arrow {
 	position: absolute;
 	top: 50%;
@@ -15,6 +16,7 @@
 	margin-top: -12px;
 	transition: transform 0.2s ease-in-out, margin-top 0.2s ease-in-out;
 }
+
 
 .placeholder {
 	display: flex;
@@ -29,6 +31,7 @@
 	cursor: pointer;
 }
 
+
 .placeholder[data-selected='true'] {
 	color: rgb(0 0 0);
 }
@@ -38,13 +41,21 @@
 	transform: rotate(180deg);
 }
 
+
 .selectWrapper[data-is-active='true'] .placeholder {
 	outline: 3px solid #000000;
 }
 
 .selectWrapper:not([data-is-active='true'])
 	.placeholder:not([data-status='invalid']):hover {
-	outline: 3px solid #000000;
+		outline: 0;
+		border: 1px solid #FFC802
+}
+
+.selectWrapper:not([data-is-active='true'])
+	.placeholder:not([data-status='invalid']):active {
+		outline: 3px solid #000000;
+		border: 0px;
 }
 
 .select {
@@ -73,12 +84,20 @@
 	cursor: pointer;
 }
 
+.option:hover {
+	border: 1px solid #FFC802
+}
+
 .option[aria-selected='true'] {
 	background-color: rgb(0 0 0 / 5%);
 }
 
 .option:hover {
-	background: var(--grey, #c4c4c4);
+	background: var(--gray_hover, #EEEEEE);
+}
+
+.option:active {
+	background: #D7D7D7;
 }
 
 @mixin option-color-before {
